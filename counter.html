@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+h1{
+    font-size: 90px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #38bdf8;
+    text-shadow: 0 5px 20px rgba(56,189,248,0.4);
+}
+
+/* BUTTON CONTAINER LOOK */
+button{
+    padding: 12px 22px;
+    margin: 8px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* INC BUTTON */
+#inc{
+    background: #22c55e;
+
+    </style>
+</head>
+<body>
+     <h1></h1>
+     <button id="inc">INC</button>
+     <button id="dec">DEC</button>
+     <button id="res">RESET</button>
+</body>
+<script>
+    let head=document.querySelector("h1")
+    let inc=document.querySelector("#inc")
+    let dec=document.querySelector("#dec") 
+    let reset=document.querySelector("#res")
+    let x=0;
+    inc.addEventListener("click",()=>{
+       head.textContent=x;
+     x++;
+
+    })
+    dec.addEventListener("click",()=>{
+    if (x > 0) 
+    {
+        x--;
+    }
+    head.textContent = x;
+  
+    })
+    reset.addEventListener("click",()=>{
+    head.textContent=0,
+    x=0;
+})
+
+
+</script>
+</html>

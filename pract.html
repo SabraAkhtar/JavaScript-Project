@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+     <h1>To-Do ist</h1>
+     <input type="text" id="input-box" placeholder="Write Here">
+     <button id="btn">aDD tASK</button>
+     <ul id="list"></ul>
+</body>
+<script>
+  let head = document.querySelector("h1");
+let input = document.querySelector("#input-box");
+let btn = document.querySelector("#btn");
+let list = document.querySelector("#list");
+
+btn.addEventListener("click", () => {
+    let value = input.value;
+
+    let li = document.createElement("li");
+    li.textContent = value;
+
+    list.appendChild(li);
+
+    head.innerText = value; // yeh optional hai
+    console.log(value);
+});
+    
+
+</script>
+</html>
